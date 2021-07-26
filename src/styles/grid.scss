@@ -1,0 +1,19 @@
+.main-app-container {
+  display: grid;
+  grid-template-areas:
+  "header-main"
+  "header-menu"
+  "header-filters"
+  "Tabs";
+}
+
+.Tabs {
+  margin: $spacing-site-mobile;
+}
+
+//Tablet? Mobile?
+@media (min-width: 1000px) {
+  .Tabs {
+    margin: $spacing-site;
+  }
+}

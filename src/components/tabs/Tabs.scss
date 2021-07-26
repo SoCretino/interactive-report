@@ -1,0 +1,169 @@
+@import "../../styles/font-style.scss";
+
+.total-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  margin: 0.5rem 0;
+  grid-template-areas:
+  "count";
+}
+
+.chart-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+  "row-bar"
+  "list-projects";
+}
+
+.donut-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+  "row-donut";
+}
+
+.chart-dm-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+  "row-grouped";
+}
+
+.donut-2-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+  "row-2-donut";
+}
+
+//Tablet? Mobile?
+@media (min-width: 1000px) {
+  .total-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $grid-gap;
+    margin: $grid-gap 0;
+  }
+  .chart-container {
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: $grid-gap;
+  }
+  .donut-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $grid-gap;
+    margin: $grid-gap 0;
+  }
+  .chart-dm-container {
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: $grid-gap;
+  }
+  .donut-2-container {
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: $grid-gap;
+  }
+}
+
+svg {
+  border: 1px solid #E8E8E8;
+  border-radius: 9px;
+}
+
+.count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 3rem 2rem;
+  border: 1px solid #E8E8E8;
+  border-radius: 9px;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px 3px rgba(0,0,0,0.06);
+  cursor: default;
+  user-select: none;
+}
+
+.count div:nth-child(1){
+  color: $color-dk-gray;
+}
+
+.count div:nth-child(2){
+  color: #000;
+  font-weight: $font-bold;
+  font-size: 40px;
+}
+
+.row-donut {
+  border-radius: 9px;
+}
+
+.list-projects {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #E8E8E8;
+  border-radius: 9px;
+}
+.list-projects h1{
+  font-size: $font-size-large;
+  text-align: center;
+  padding-bottom: 22px;
+  color: $color-chart;
+}
+.user-list-overall {
+  font-size: $font-size-large;
+  font-weight: 600;
+  cursor: pointer;
+  list-style-type: none;
+  user-select: none;
+  border-bottom: 1px solid $color-gray
+}
+
+.user-list-projects {
+  cursor: default;
+  font-weight: $font-regular;
+  font-size: $font-size;
+  background: white;
+  padding: 0;
+  margin: 0;
+  list-style: none
+}
+
+.user-list {
+  font-weight: $font-bold;
+  font-size: $font-size;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-radius: 1px;
+}
+
+.user-name {
+  width: 40%;
+}
+
+.user-projects {
+  width: 20%;
+  text-align: right;
+}
+
+.user-hours {
+  width: 20%;
+  text-align: right;
+}
+
+.user-list-opened {
+  background: $color-main;
+  transition: background 0.4s;
+}
+
+.user-projects-per-user {
+  color: $color-dk-gray;
+  font-weight: $font-regular;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.user-list-closed {
+  background: #fff;
+  transition: background 0.4s;
+}

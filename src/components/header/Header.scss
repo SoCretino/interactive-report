@@ -1,0 +1,142 @@
+@import "../../styles/font-style.scss";
+
+.header-main {
+  padding-left: 25px;
+  color: #FFFFFF;
+  background: $color-main;
+  //box-shadow: 0 0 12px 4px rgba(0,0,0,0.23), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+}
+
+.header-menu {
+  background: #FFF;
+  box-shadow: 0 0 6px 3px rgba(0,0,0,0.06);
+}
+
+.active-navlink {
+  color: $color-main!important;
+}
+
+.Header {
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  -webkit-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #E8E8E8;
+    li a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline;
+    cursor: pointer;
+    color: $color-href;
+    text-decoration: none;
+  }
+}
+
+.Header + .Tabs {
+  padding-top: 220px;
+}
+
+@media (max-width: 999px) {
+  .Header + .Tabs {
+    padding-top: 240px;
+  }
+}
+
+@media (max-width: 734px){
+  .Header + .Tabs {
+    padding-top: 570px;
+  }
+}
+
+.header-menu ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border-bottom: 1px solid #E8E8E8;
+  list-style: none;
+  padding-left: $spacing-padding-left;
+  & li {
+    margin: $spacing-small;
+  }
+}
+
+.header-filters {
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+  align-items: center;
+  padding: $spacing-small;
+}
+
+
+//Datepicker
+.datepicker {
+  background: $color-gray;
+  border: 0;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+  user-select: none;
+  font-size:.7rem;
+  color: $color-dk-gray;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+//Workshop
+.workshop-label {
+  margin: 0 0 5px 0;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background: $color-main;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+  box-shadow: none;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: $color-dk-gray;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: $color-dk-gray;
+}
+.react-toggle--checked .react-toggle-thumb {
+  border-color: $color-dk-gray;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background: $color-main-light;
+}
+
+.react-toggle-track {margin-bottom: 20px;}
+
+//Tablet? Mobile?
+@media (min-width: 734px) {
+  .header-menu ul {
+    display: flex;
+    flex-direction: row;
+    & li {
+      margin-right: $spacing-margin-right;
+    }
+  }
+  .header-filters {
+    display: flex;
+    flex-direction: row;
+    padding-left: $spacing-padding-left;
+  }
+  .datepicker {
+    margin: 0 $spacing-margin-right 0 0;
+  }
+  .workshop-label {
+    margin: 0 $spacing-margin-right 0 0;
+  }
+  .react-toggle-track {
+    margin: 0 $spacing-margin-right 0 0;
+  }
+}
+

@@ -1,0 +1,38 @@
+//Default Font
+$font-stack: 'Montserrat';
+$font-size: 13px;
+$font-size-large: 24px;
+$font-regular: 400;
+$font-bold: 700;
+
+//Chart Font
+$font-chart-size-title: 24;
+$font-chart-size-subtitle: 13;
+
+// Colors
+$color-main: #0039FF;
+$color-main-light: #0084c9;
+$color-gray: #F1F1F1;
+$color-dk-gray: #888888;
+$color-href: #000;
+$color-chart: #212121;
+
+//Spacing -- Margin, padding
+$spacing-site: 0 20px 20px;
+$spacing-site-mobile: 0 10px 10px;
+$spacing-small: 20px 0;
+$spacing-margin-right: 25px;
+$spacing-padding-left: 25px;
+
+//Grid
+$grid-gap: 1.5rem;
+
+//Export values to .js files
+:export {
+  fontStack: $font-stack;
+  fontSizeTitle: $font-chart-size-title;
+  fontSizeSubtitle: $font-chart-size-subtitle;
+  fontRegular: $font-regular;
+  fontBold: $font-bold;
+  colorChart: $color-chart;
+}

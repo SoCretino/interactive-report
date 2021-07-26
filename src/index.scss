@@ -1,0 +1,20 @@
+@import-normalize;
+@import './styles/font-style.scss';
+@import './styles/grid.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-gray;
+  margin: 0;
+  font-family: $font-stack, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-regular;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
